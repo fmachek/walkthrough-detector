@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walkthroughs</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #4b4b4b;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+
+        #main-block {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        #refresh>a {
+            display: flex;
+            gap: 10px;
+            text-decoration: none;
+            color: #858585;
+            transition: color 0.3s ease;
+            text-align:center;
+        }
+
+        #wamount {
+            margin: auto;
+            margin-top: 200px;
+            text-align: center;
+            font-size: 42px;
+        }
+
+        #refresh>a:hover {
+            color: #dbdbdb;
+        }
+
+        #refresh-icon {
+            transition: transform 0.3s ease;
+        }
+
+        #refresh>a:hover #refresh-icon {
+            transform: rotate(180deg) translateY(2px);
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div id="main-block">
+        <h1 id="wamount">Walkthroughs today: <%= data.walkthroughsToday %>
+        </h1>
+        <h2 id="refresh"><a href=""><i class="fa fa-refresh" id="refresh-icon"></i>Refresh to update</a></h2>
+    </div>
+</body>
+
+</html>
